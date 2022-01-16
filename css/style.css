@@ -1,0 +1,228 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    font-size: 16px;
+}
+.container {
+    max-width: 1100px;
+    margin: 0px auto;
+}
+header {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0px;
+    position: relative;
+    z-index: 1;
+}
+.cover,
+.gallery-item__cover {
+    position: absolute;
+    background-color: rgba(14%, 16%, 26%, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+.header__content {
+    color: white;
+}
+.header__content h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+.header__content p {
+    display: inline-block;
+    max-width: 650px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+.main-btn {
+    border: white 3px solid;
+    background-color: transparent;
+    padding: 1.3rem 2rem;
+    vertical-align: top;
+}
+.main-btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.main__gallery-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    padding: 0px;
+    grid-template-rows: repeat(3, 450px);
+}
+.gallery-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.gallery-item__content {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    position: absolute;
+    width: 100%;
+}
+.gallery-item__content h2 {
+    font-size: 3.125rem;
+    border-bottom: 5px solid white;
+    padding-bottom: 10px;
+    padding-right: 50px;
+}
+.gallery-item__content p {
+    font-size: 1.25rem;
+    text-align: left;
+    margin-top: 10px;
+    letter-spacing: 5px;
+}
+.gallery-item__cover {
+    z-index: 1;
+}
+.gallery-item:nth-child(1) {
+    background-image: url(../img/pic01.jpg);
+}
+.gallery-item:nth-child(2) {
+    grid-column: span 2;
+    background-image: url(../img/pic02.jpg);
+}
+.gallery-item:nth-child(3) {
+    grid-column: span 2;
+    background-image: url(../img/pic03.jpg);
+}
+.gallery-item:nth-child(4) {
+    background-image: url(../img/pic04.jpg);
+}
+.gallery-item:nth-child(5) {
+    background-image: url(../img/pic05.jpg);
+}
+.gallery-item:nth-child(6) {
+    grid-column: span 2;
+    background-image: url(../img/pic06.jpg);
+}
+.gallery-item:nth-child(1) .gallery-item__cover {
+    background-color: rgba(122, 192, 216, 0.5);
+}
+.gallery-item:nth-child(2) .gallery-item__cover {
+    background-color: rgba(143, 134, 193, 0.5);
+}
+.gallery-item:nth-child(3) .gallery-item__cover {
+    background-color: rgba(229, 146, 137, 0.5);
+}
+.gallery-item:nth-child(4) .gallery-item__cover {
+    background-color: rgba(223, 182, 144, 0.5);
+}
+.gallery-item:nth-child(5) .gallery-item__cover {
+    background-color: rgba(139, 161, 218, 0.5);
+}
+.gallery-item:nth-child(6) .gallery-item__cover {
+    background-color: rgba(121, 174, 150, 0.5);
+}
+.about__me {
+    padding: 100px 0px;
+    background-color: rgb(42, 47, 74);
+}
+.about__me hr {
+    margin-bottom: 3rem;
+}
+.about__me h1 {
+    color: white;
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.about__me p {
+    color: white;
+    font-size: 1.25rem;
+    text-align: left;
+}
+.btn-about {
+    margin-top: 20px;
+}
+.footer__content h1 {
+    text-align: center;
+    color: white;
+    font-size: 3.3rem;
+    margin-bottom: 1.5rem;
+}
+.footer__content {
+    background-color: #242943;
+    padding: 100px 0px;
+}
+.footer-form {
+    display: grid;
+    grid-template-areas:
+        "name__label email__label"
+        "name__input email__input"
+        "message__label ."
+        "message__text message__text"
+        "button .";
+    grid-template-rows: minmax(auto, auto) 50px minmax(auto, auto) 150px 50px;
+    grid-gap: 15px;
+}
+.footer-form input,
+.footer-form textarea {
+    background-color: #2a2f4a;
+    border: none;
+    outline: none;
+    padding: 0px 20px;
+    color: white;
+    resize: none;
+    font-size: 1.1rem;
+}
+#name {
+    grid-area: name__input;
+}
+#email {
+    grid-area: email__input;
+}
+#message {
+    grid-area: message__text;
+}
+.footer-form button {
+    grid-area: button;
+}
+.footer-form label:nth-of-type(1) {
+    grid-area: name__label;
+}
+.footer-form label:nth-of-type(2) {
+    grid-area: email__label;
+}
+.footer-form label:nth-of-type(3) {
+    grid-area: message__label;
+}
+.footer-form label {
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.footer-form button {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 1.1rem;
+    color: #242943;
+    text-transform: uppercase;
+}

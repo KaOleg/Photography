@@ -1,0 +1,50 @@
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+    header,
+    .footer__content,
+    .about__me {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .main__gallery-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 400px);
+    }
+    .gallery-item {
+        grid-column: 1;
+    }
+    .gallery-item__content h2 {
+        text-align: center;
+        padding-right: 0px;
+    }
+    .header__content p {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 525px) {
+    .footer-form {
+        grid-template-areas:
+            "name__label"
+            "name__input"
+            "email__label"
+            "email__input"
+            "message__label"
+            "message__text"
+            "button";
+        grid-template-rows: minmax(auto, auto) 50px minmax(auto, auto) 50px minmax(
+                auto,
+                auto
+            ) 150px 50px;
+    }
+    h1 {
+        font-size: 2.8rem !important;
+    }
+    header {
+        padding: 100px 20px;
+    }
+    .footer__content {
+        padding: 50px 20px;
+    }
+}
