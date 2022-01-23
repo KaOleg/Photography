@@ -226,3 +226,6 @@ hr {
     color: #242943;
     text-transform: uppercase;
 }
+.main-btn:hover{
+    border-color: rgba(3, 233, 41, 0.562);
+}
