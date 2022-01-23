@@ -228,4 +228,5 @@ hr {
 }
 .main-btn:hover{
     border-color: rgba(3, 233, 41, 0.562);
+    background-color: green;
 }
